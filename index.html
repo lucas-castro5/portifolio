@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioHUB - Lucas Castro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        .project {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        .project a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PortfolioHUB - Lucas Castro</h1>
+        <p>Projetos Acadêmicos Integrados com GitHub e Google Workspace</p>
+    </header>
+    <main id="project-list">
+        <!-- Projetos serão inseridos dinamicamente -->
+    </main>
+
+    <script>
+        // Lista de projetos (pode ser adaptado para carregar de API ou JSON externo)
+        const projetos = [
+            {
+                nome: "Sistema de Gestão Escolar",
+                descricao: "Sistema de controle acadêmico com funcionalidades de matrícula e notas.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/sistema_gestao_escolar"
+            },
+            {
+                nome: "Controle de Estoque em Java",
+                descricao: "Aplicação de inventário e controle de produtos com interface em Java puro.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/controle_estoque_java"
+            },
+            {
+                nome: "App de Tarefas",
+                descricao: "To-do list integrada com armazenamento local e funcionalidades CRUD.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/todo_app"
+            }
+        ];
+
+        const container = document.getElementById("project-list");
+
+        projetos.forEach(projeto => {
+            const div = document.createElement("div");
+            div.className = "project";
+
+            div.innerHTML = `
+                <h3>${projeto.nome}</h3>
+                <p>${projeto.descricao}</p>
+                <a href="${projeto.link}" target="_blank">Ver no GitHub</a>
+            `;
+
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
