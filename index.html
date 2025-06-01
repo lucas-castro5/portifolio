@@ -13,7 +13,7 @@
             padding: 0;
         }
         header {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
@@ -32,7 +32,7 @@
             margin-top: 0;
         }
         .project a {
-            color: #007bff;
+            color: #2980b9;
             text-decoration: none;
         }
         .project a:hover {
@@ -43,29 +43,39 @@
 <body>
     <header>
         <h1>PortfolioHUB - Lucas Castro</h1>
-        <p>Projetos Acadêmicos Integrados com GitHub e Google Workspace</p>
+        <p>Repositório de Projetos Acadêmicos</p>
     </header>
     <main id="project-list">
         <!-- Projetos serão inseridos dinamicamente -->
     </main>
 
     <script>
-        // Lista de projetos (pode ser adaptado para carregar de API ou JSON externo)
+        // Lista de projetos do repositório "projetos_academicos"
         const projetos = [
             {
-                nome: "Sistema de Gestão Escolar",
-                descricao: "Sistema de controle acadêmico com funcionalidades de matrícula e notas.",
-                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/sistema_gestao_escolar"
+                nome: "Projeto 1 - Sistema Escolar",
+                descricao: "Sistema de gestão escolar com funcionalidades administrativas.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/SistemaEscolar"
             },
             {
-                nome: "Controle de Estoque em Java",
-                descricao: "Aplicação de inventário e controle de produtos com interface em Java puro.",
-                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/controle_estoque_java"
+                nome: "Projeto 2 - Loja Virtual",
+                descricao: "Simulação de loja virtual com interface básica e controle de estoque.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/LojaVirtual"
             },
             {
-                nome: "App de Tarefas",
-                descricao: "To-do list integrada com armazenamento local e funcionalidades CRUD.",
-                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/todo_app"
+                nome: "Projeto 3 - Calculadora em Java",
+                descricao: "Calculadora com operações básicas implementada em Java puro.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/CalculadoraJava"
+            },
+            {
+                nome: "Projeto 4 - Agenda de Contatos",
+                descricao: "Aplicação de agenda para cadastro, exclusão e listagem de contatos.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/AgendaContatos"
+            },
+            {
+                nome: "Projeto 5 - Jogo da Velha",
+                descricao: "Jogo da velha simples implementado com lógica Java e interface gráfica.",
+                link: "https://github.com/lucas-castro5/projetos_academicos/tree/main/JogoDaVelha"
             }
         ];
 
@@ -78,7 +88,7 @@
             div.innerHTML = `
                 <h3>${projeto.nome}</h3>
                 <p>${projeto.descricao}</p>
-                <a href="${projeto.link}" target="_blank">Ver no GitHub</a>
+                <a href="${projeto.link}" target="_blank">Ver Projeto no GitHub</a>
             `;
 
             container.appendChild(div);
